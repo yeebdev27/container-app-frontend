@@ -14,12 +14,12 @@ const NewsList = () => {
     return (
         <>
             <div className="grid-Newslist">
-                {posts.data?.map(post => (
-                    <div className="grid-item" key={post.id}>
-                        <h3>{post.title}</h3>
-                        {post.image && <img src={post.image} alt={post.title} style={{ width: '200px' }} />}
-                        <p>{post.description}</p>
-                    </div>
+                {posts.map(post => (
+                <div className="grid-item" key={post.id}>
+                    <h3>{post.title}</h3>
+                    {post.image && <img src={post.image} alt={post.title} style={{ width: '200px' }} />}
+                    <p>{post.description}</p>
+                </div>
                 ))}
             </div>
         </>
